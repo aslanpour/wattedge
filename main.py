@@ -223,7 +223,7 @@ def get_usbmeter_log(file):
     client = paramiko.SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(second_pi, username='pi', password='disnetlab-bird')
+    client.connect(second_pi, username='pi', password='XXXXX')
     
     x = ["local time", "local time ts", "mWh", "mAh", "Volts",
                      "Amps", "Watts", "Temperature", "Resistence",
@@ -490,7 +490,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXX')
             try:
                 print('SSH ok')
                 cmd = "iperf3 -c " + main_pi + " -t " + str(benchmark_duration + benchmark_tolerance)\
@@ -511,7 +511,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXX')
             try:
                 print('SSH ok')
                 cmd = "iperf3 -s --one-off"
@@ -558,7 +558,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXX')
             try:
                 print('SSH ok')
                 cmd = ('python3 /home/pi/http_load_generator.py '
@@ -624,7 +624,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXX')
             try:
                 print('SSH ok')
                                 
@@ -684,7 +684,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXXX')
             try:
                 print('SSH ok')
                 cmd=('python3 mqtt_handler.py --role publisher '
@@ -720,7 +720,7 @@ def benchmark_thread():
             client = paramiko.SSHClient()
             client.load_system_host_keys()
             client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(second_pi, username='pi', password='disnetlab-bird')
+            client.connect(second_pi, username='pi', password='XXXXX')
             try:
                 print('SSH ok')
                 cmd = ('python3 mqtt_handler.py '
@@ -793,7 +793,7 @@ def usb_meter_connection():
     client = paramiko.SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(second_pi, username='pi', password='disnetlab-bird')
+    client.connect(second_pi, username='pi', password='XXXX')
     try:
         print('SSH ok')
         if set_time:
